@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Enter your commit"
-read commmit
-
 git add .
-git commit -m "${commmit}"
+git commit -m "0x00-python-hello_world"
 git push origin main
