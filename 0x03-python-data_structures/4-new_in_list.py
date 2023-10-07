@@ -11,5 +11,6 @@ def new_in_list(my_list, idx, element):
         for i in range(len(my_list)):
             if (i == idx):
                 arr.append(element)
-            arr.append(my_list[i])
+            else:
+                arr.append(my_list[i])
         return (arr)
