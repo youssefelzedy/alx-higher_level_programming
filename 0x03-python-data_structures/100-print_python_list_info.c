@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void print_python_list_info(PyObject *p);
+void print_python_list_info(PyObject *p)
 {
 	int size, alloc, i;
 	PyOpject *obj;
