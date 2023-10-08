@@ -8,47 +8,26 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *current;
-	listint_t *first_half;
-	listint_t *last_half;
-	listint_t *middle;
-	int size, i;
-
-	first_half = last_half = *head;
-	size = i = 0;
-
-	if (*head == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
-	
-	size++;
+	return (check(head, *head));
+}
 
-	while (first_half->next != NULL && first_half->next->next != NULL)
+/**
+ * check - checks if a singly linked list is a palindrome
+ * @left: pointer to left side of list
+ * @right: pointer to right side of list
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ */
+
+int check(listint_t **left, listint_t *right)
+{
+	if (right == NULL)
+		return (1);
+	if (check(left, right->next) && (*left)->n == right->n)
 	{
-		last_half = last_half->next;
-		first_half = first_half->next->next;
-		size++;
+		*left = (*left)->next;
+		return (1);
 	}
-
-	middle = last_half->next;
-	last_half = last_half->next;
-
-	while (middle != NULL && middle->next != NULL)
-	{
-		current = middle->next;
-		middle->next = middle->next->next;
-		current->next = last_half;
-		last_half = current;
-	}
-
-	first_half->next = last_half;
-	first_half = *head;
-
-	for (i = 0; i < size && last_half != NULL; i++)
-	{
-		if (first_half->n != last_half->n)
-			return (0);
-		first_half = first_half->next;
-		last_half = last_half->next;
-	}
-	return (1);
+	return (0);
 }
