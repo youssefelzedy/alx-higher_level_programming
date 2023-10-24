@@ -7,10 +7,8 @@ class Square:
     def __init__(self, size=0):
         """size init"""
         try:
-            if size < 0 and type(size) is int: 
-               self.__size = size
+            self.__size = size
         except TypeError:
             raise TypeError("size must be an integer")
         except ValueError:
             raise ValueError("size must be >= 0")
-
