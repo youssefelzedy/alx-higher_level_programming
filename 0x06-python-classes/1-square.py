@@ -6,4 +6,4 @@ class Square:
     """empty class"""
     def __init__(self, size):
         """intit"""
-        self-__size = size
+        self.__size = size
