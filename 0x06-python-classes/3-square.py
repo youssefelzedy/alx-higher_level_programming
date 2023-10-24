@@ -19,4 +19,4 @@ class Square:
 
     def area(self):
         """area"""
-        retrun self.__size ** 2
+        return (self.__size ** 2)
