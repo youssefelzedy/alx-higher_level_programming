@@ -57,7 +57,7 @@ class Square:
         Args:
             value (int): size of square
         """
-        if all(isinstance(num, int) and num >= 0 for num in value):
+        if (all(isinstance(num, int) and num >= 0 for num in value)):
             self.__position = value
             return
         raise TypeError("position must be a tuple of 2 positive integers")
@@ -73,6 +73,8 @@ class Square:
     def my_print(self):
         if (self.__size == 0):
             print()
+            return
         else:
+            print("\n" * self.__position[1])
             for i in range(self.__size):
-                print("#" * self.__size)
+                print(" " * self.__position[0] + "#" * self.__size, sep="")
