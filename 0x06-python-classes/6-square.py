@@ -57,9 +57,10 @@ class Square:
         Args:
             value (int): size of square
         """
-        if (all(isinstance(num, int) and num >= 0 for num in value)):
-            self.__position = value
-            return
+        if isinstance(value, tuple) and len(value) == 2:
+            if (all(isinstance(num, int) and num >= 0 for num in value)):
+                self.__position = value
+                return
         raise TypeError("position must be a tuple of 2 positive integers")
 
     """ area """
