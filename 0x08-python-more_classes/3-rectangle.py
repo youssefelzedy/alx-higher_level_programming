@@ -72,9 +72,3 @@ class Rectangle:
         rect_str *= self.__height - 1
         rect_str += "#" * self.__width
         return rect_str
-
-    def __repr__(self):
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        else:
-            return 2 * self.__width + 2 * self.__height
