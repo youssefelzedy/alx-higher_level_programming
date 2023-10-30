@@ -113,5 +113,4 @@ class Rectangle:
             size (int): size of the square
             Returns:
             Rectangle: new Rectangle instance"""
-        cls.__width = size
-        cls.__height = size
+        return cls(size, size)
