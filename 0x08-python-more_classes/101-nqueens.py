@@ -7,8 +7,7 @@ result = []
 # Program to solve N-Queens Problem
 
 
-def solveBoard(board, row, rowmask,
-            ldmask, rdmask):
+def solveBoard(board, row, rowmask, ldmask, rdmask):
 
     n = len(board)
 
@@ -70,8 +69,8 @@ def solveBoard(board, row, rowmask,
 
         # these bit masks will keep updated in each
         # iteration for next row
-        solveBoard(board, row+1, rowmask | p,
-                (ldmask | p) << 1, (rdmask | p) >> 1)
+        solveBoard(board, row+1, rowmask | p, (ldmask | p) << 1,
+                   (rdmask | p) >> 1)
 
         # Reset right-most set bit to 0 so, next
         # iteration will continue by placing the queen
@@ -88,6 +87,7 @@ def printBoard(board):
     for row in board:
         print("|" + "|".join(row) + "|")
 
+
 # Driver Code
 def print_result():
     for x in range(len(result)):
@@ -98,9 +98,10 @@ def print_result():
                 print(", ", end="")
         print("]")
 
+
 def main():
 
-    n = int(sys.argv[1]) # board size
+    n = int(sys.argv[1])
     board = []
 
     if n < 4:
@@ -127,8 +128,5 @@ def main():
     print_result()
 
 
-
-
 if __name__ == "__main__":
     main()
-
