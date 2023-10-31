@@ -101,18 +101,21 @@ def print_result():
 
 def main():
 
-    n = int(sys.argv[1])
-    board = []
 
+    board = []
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
+        exit(1)
+    try:
+        n = int(sys.argv[1])
+    except:
+        print("N must be a number")
         exit(1)
     if n < 4:
         print("N must be at least 4")
         exit(1)
-    if not isinstance(n, int):
-        print("N must be a number")
-        exit(1)
+
+
     for i in range(n):
         row = []
         for j in range(n):
