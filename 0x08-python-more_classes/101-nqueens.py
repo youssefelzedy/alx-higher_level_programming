@@ -101,6 +101,7 @@ def print_result():
 
 def main():
     board = []
+
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
@@ -110,8 +111,6 @@ def main():
     except:
         print("N must be a number")
         exit(1)
-    finally:
-        n = int(sys.argv[1])
 
     if n < 4:
         print("N must be at least 4")
