@@ -108,9 +108,10 @@ def main():
 
     try:
         n = int(sys.argv[1])
-    except:
+    except ValueError:
         print("N must be a number")
         exit(1)
+        raise
 
     if n < 4:
         print("N must be at least 4")
