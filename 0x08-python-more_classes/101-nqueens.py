@@ -111,7 +111,6 @@ def main():
     except ValueError:
         print("N must be a number")
         exit(1)
-        raise
 
     if n < 4:
         print("N must be at least 4")
