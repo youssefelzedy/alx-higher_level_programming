@@ -103,6 +103,12 @@ def main():
     n = int(sys.argv[1]) # board size
     board = []
 
+    if n < 4:
+        print("N must be at least 4")
+        exit(1)
+    if not isinstance(n, int):
+        print("N must be a number")
+        exit(1)
     for i in range(n):
         row = []
         for j in range(n):
