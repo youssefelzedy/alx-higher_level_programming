@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 """Module for BaseGeometry class"""
 
-int = __import__('int').int
-
 
 calss MyInt(int):
     """MY ITN CLASS"""
 
-    def __eq__(self, other):
+    def __eq__(self, value):
         """Returns the opposite of the == operator"""
         return super().__ne__(other)
 
-    def __ne__(self, other):
+    def __ne__(self, value):
         """Returns the opposite of the != operator"""
         return super().__eq__(other)
