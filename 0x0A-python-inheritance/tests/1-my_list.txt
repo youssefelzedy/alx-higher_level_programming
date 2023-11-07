@@ -71,10 +71,3 @@ Works with negative numbers as well
 
     >>> l4
     [-2513461346364, -1285720873193, 0, -345662577682686554, 1]
-
-check append.
-    >>> l1 = [4, 3, 2]
-    >>> l1.append(3)
-    >>> gg = MyList(l1)
-    >> gg
-    [4, 3, 2, 3]
