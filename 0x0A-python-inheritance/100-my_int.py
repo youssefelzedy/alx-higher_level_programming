@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module for BaseGeometry class"""
 
+int = __import__('int').int
+
 
 calss MyInt(int):
     """MY ITN CLASS"""
