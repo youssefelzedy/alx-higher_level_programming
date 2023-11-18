@@ -65,3 +65,14 @@ class Base:
             for dict in new_list:
                 new_list.append(cls.create(**dict))
         return new_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """save to file csv"""
+        filename = cls.__name__ + ".csv"
+        list = []
+        if list_objs is not None:
+            for obj in list_objs:
+                list.append(obj.to_dictionary())
+        with open(filename, "w") as f:
+            f.write(cls.to_json_string(list))
