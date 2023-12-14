@@ -1,3 +1,2 @@
 -- List a table
-USE mysql;
-SHOW TABLES;
+SHOW TABLES IN mysql;  
