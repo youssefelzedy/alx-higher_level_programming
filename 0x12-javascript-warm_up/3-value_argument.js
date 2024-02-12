@@ -1,6 +1,7 @@
 #!/usr/bin/node
-if (process.argv.length === 2) {
+const num = parseInt(process.argv[2]);
+if (!num) {
   console.log('No argument');
 } else {
-  console.log(`${process.argv[2]}`);
+  console.log(`${num}`);
 }
