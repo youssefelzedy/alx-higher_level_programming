@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const len = parseInt(process.argv[2]);
-if (!len) {
-  console.log('Missing number of occurrences');
+if (isNaN(len)) {
+  console.log('Missing size');
 } else {
   for (let i = 0; i < len; i++) {
     let row = '';
