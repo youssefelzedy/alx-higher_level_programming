@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
     name = sys.argv[4]
-    cur.execute("SELECT `cities`.`id`, `cities`.`name`, `states`.`name`\
+    cur.execute("SELECT `cities`.`name`\
                 FROM `cities`\
                 JOIN `states` ON `cities`.`state_id` = `states`.`id`\
                 WHERE `states`.`name` = %s\
