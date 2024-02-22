@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 '''
 7-model_state_fetch_all.py:
 script that lists all State objects from the database hbtn_0e_6_usa
@@ -12,6 +10,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy import create_engine, VARCHAR, Column, Integer, String
 
 Base = declarative_base()
+
 
 class State(Base):
     '''
