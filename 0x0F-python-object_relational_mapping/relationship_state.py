@@ -3,8 +3,8 @@
 base srate model class for the project
 '''
 
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
-from sqlalchemy import create_engine, VARCHAR, Column, Integer, String
+from sqlalchemy import Column, VARCHAR, Integer
+from sqlalchemy.orm import declarative_base, relationship
 
 Base = declarative_base()
 
