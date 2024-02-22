@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 '''
-8-model_state_fetch_first.py: script that prints the first State object from
-the database hbtn_0e_6_usa
+11-model_state_insert.py: script that adds the State object "Louisiana" to the
+database hbtn_0e_6_usa
+Usage: ./11-model_state_insert.py <mysql username> <mysql password>
+<database name>
 '''
 
 from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy import create_engine, VARCHAR, Column, Integer, String
+from sqlalchemy import create_engine
 from sys import argv
 from model_state import Base, State
 
@@ -19,6 +21,6 @@ if __name__ == "__main__":
     louisiana = State(name='Louisiana')
     session.add(louisiana)
     session.commit()
-    print(new_state.id)
+    print(louisiana.id)
 
     session.close()
