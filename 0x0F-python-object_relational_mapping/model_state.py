@@ -8,11 +8,8 @@ Usage: ./7-model_state_fetch_all.py <mysql username> <mysql password>
 <database name>
 '''
 
-from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
-from model_state import Base
 from sqlalchemy import create_engine, VARCHAR, Column, Integer, String
-import sys
 
 Base = declarative_base()
 
