@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 '''
-7-model_state_fetch_all.py:
-script that lists all State objects from the database hbtn_0e_6_usa
-Usage: ./7-model_state_fetch_all.py <mysql username> <mysql password>
-<database name>
+base srate model class for the project
 '''
 
 from sqlalchemy.orm import declarative_base, sessionmaker
