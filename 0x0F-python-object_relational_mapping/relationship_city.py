@@ -3,10 +3,8 @@
 base srate model class for the project
 '''
 
-from sqlalchemy import create_engine, ForeignKey, \
-        Column, String, Integer, VARCHAR
-from model_state import Base, State
-from sqlalchemy.orm import declarative_base
+from relationship_state import Base, State
+from sqlalchemy import Column, Integer, VARCHAR, ForeignKey
 
 Base = declarative_base()
 
