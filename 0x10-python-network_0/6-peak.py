@@ -12,4 +12,3 @@ def find_peak(arr):
         elif i > 0 and arr[i - 1] < arr[i] > arr[i + 1]:
             return arr[i]
     return None
-
