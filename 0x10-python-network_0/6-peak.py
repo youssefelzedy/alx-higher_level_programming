@@ -1,14 +1,19 @@
 #!/usr/bin/python3
-""" a module that defines find_peak function"""
+""" function find_peak """
 
 
-def find_peak(arr):
-    """ find peak """
-    for i in range(len(arr) - 1):
-        if i == 0 and arr[i] > arr[i + 1]:
-            return arr[i]
-        elif i == len(arr) - 2 and arr[i] < arr[i + 1]:
-            return arr[i + 1]
-        elif i > 0 and arr[i - 1] < arr[i] > arr[i + 1]:
-            return arr[i]
-    return None
+def find_peak(list_of_integers):
+    """Define the function"""
+    if list_of_integers == []:
+        return None
+    st = 0
+    nd = len(list_of_integers) - 1
+    while st < nd:
+        if list_of_integers[st] > list_of_integers[st + 1]:
+            return list_of_integers[st]
+        if list_of_integers[nd] > list_of_integers[nd - 1]:
+            return list_of_integers[nd]
+        st += 1
+        nd -= 1
+
+    return list_of_integers[st]
