@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Script that fetches https://intranet.hbtn.io/status"""
-
+"""initializate"""
 from urllib.request import urlopen
 
-def hbtn_status_new():
+
+def hbtn_status_0():
+    """function show my status"""
     with urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
         utf8 = html.decode('utf-8')
@@ -13,5 +14,5 @@ def hbtn_status_new():
 
 
 if __name__ == '__main__':
-    hbtn_status_new()
+    hbtn_status_0()
     
