@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""
-list 10 commits (from the most recent to oldest) of the repository and user
-sent in as arguments
-"""
+"""display your github id"""
 import requests
-from sys import argv
-
-
-def github_commit():
-    r = requests.get('https://api.github.com/repos/{}/{}/commits'
-                     .format(argv[2], argv[1]))
-    commits = r.json()
-    for commit in commits[:10]:
-        print(commit.get('sha'), end=': ')
-        print(commit.get('commit').get('author').get('name'))
-
+import sys
 
 if __name__ == '__main__':
-    github_commit()
+
+    repo = sys.argv[1]
+    owner = sys.argv[2]
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
+    r = requests.get(url)
+    res = r.json()
+    try:
+        for i in range(10):
+            name = res[i].get('commit').get('author').get('name')
+            print('{}: {}'.format(res[i].get('sha'), name))
+    except IndexError:
+        pass
