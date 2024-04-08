@@ -4,7 +4,7 @@ const request = require('request');
 let count = 0;
 
 const options = {
-  url: 'https://swapi-api.alx-tools.com/api/films/',
+  url: process.argv[2],
   method: 'GET'
 };
 
